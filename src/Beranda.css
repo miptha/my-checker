@@ -1,0 +1,12 @@
+*{font-family: Helvetica}
+
+.bck-card{
+    background:linear-gradient(-50deg,#2980B9 25%,  #FFFFFF 50%, #6DD5FA 75%);
+}
+@media only screen and (min-width: 768px) {
+    .menu{
+        width: 50px;
+        height: auto;
+        position: relative;
+    }
+}

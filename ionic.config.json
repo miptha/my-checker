@@ -1,0 +1,7 @@
+{
+  "name": "MY CHECKER XPDC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
