@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'MY CHECKER XPDC',
+  appId: 'io.checker.starter',
+  appName: 'MY CHECKER',
   webDir: 'build',
   bundledWebRuntime: false
 };

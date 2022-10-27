@@ -183,7 +183,7 @@ const useManifest: React.FC = () => {
                     <IonGrid style={{padding:"20px 0", margin:"5px"}} onClick={()=>{setIsCloseManifest(true)}}>
                       <IonRow>
                         <IonCol>
-                          <button style={{padding:"15px", marginTop:"10px", width:"100%", borderRadius:"5px", background:"#0000A0", color:"white"}}>SCAN BARCODE</button>
+                          <button style={{padding:"15px", marginTop:"10px", width:"100%", borderRadius:"5px", background:"#0000A0", color:"white"}} onClick={plugBarcode}>SCAN BARCODE</button>
                         </IonCol>
                         <IonCol>
                           <button style={{padding:"15px", marginTop:"10px", width:"100%", borderRadius:"5px", background:"#0000A0", color:"white"}}>SIMPAN</button>
