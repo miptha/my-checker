@@ -26,14 +26,9 @@ return(
             
             <div style={{textAlign:"start", display:"flex", margin:"10px 0"}}>
               <button onClick={history.goBack} style={{padding:"0" ,border:"none" , background: "transparent"}}>
-                  <IonIcon icon={chevronBackOutline} id='iconBack' style={{fontSize:"32px" , margin:"0", color:"#0000A0"}}/>
+                  <IonIcon icon={chevronBackOutline} id='iconBack' style={{fontSize:"32px" , margin:"0", color:"black"}}/>
               </button>
-              <IonTitle>INBOUND DETAIL</IonTitle>
-              <IonButtons slot="end" style={{textAlign:"end"}}>
-                <IonButton onClick={() => setIsOpenShipment(true)} style={{textAlign:"end"}}>
-                  <IonIcon src={addCircleSharp} style={{fontSize:"36px", color:"#0000A0", textAlign:"end"}}></IonIcon>
-                </IonButton>
-              </IonButtons>
+              <IonTitle style={{color:"black", textAlign:"center", justifyContent:"center"}}>INBOUND DETAIL</IonTitle>
             </div>
         </IonToolbar>
     </IonHeader>
@@ -43,7 +38,7 @@ return(
                 <IonText mode="ios" style={{fontSize:"18px", fontWeight:"bold"}}>No.Tracking</IonText>
             </IonCol>
             <IonCol style={{textAlign:"end"}}>
-                <IonText mode="ios" style={{fontSize:"18px"}}>XPDC2022080621</IonText>
+                <IonText mode="ios" style={{fontSize:"18px", fontWeight:"bold"}}>XPDC2022080621</IonText>
             </IonCol>
         </IonRow>
         <IonRow style={{borderBottom:"1px solid black", margin:"15px"}}>
@@ -78,7 +73,7 @@ return(
           <IonRow style={{margin:"0", padding:"0"}}>
             <IonText mode="ios" style={{fontSize:"18px", marginLeft:"15px", padding:"0", }}>Detail Order</IonText>
           </IonRow>
-          <IonCard style={{ fontSize:"16px", borderRadius:"10px 10px 0 0"}} >
+          <IonCard style={{ fontSize:"16px", borderRadius:"5px 5px 0 0" , border:"1px solid #0000A0"}} >
             <IonRow style={{padding:"10px", background:"#0000A0"}}>
                 <IonText mode="ios" style={{color:"white"}}>XPDC2022080621-1</IonText>
             </IonRow>
@@ -105,7 +100,7 @@ return(
                 <IonText mode="ios" style={{fontSize:"16px", color:"black"}}>Tinggi: 10 cm</IonText>
             </IonRow>
           </IonCard>
-          <IonCard style={{fontSize:"16px", borderRadius:"10px 10px 0 0" }} >
+          <IonCard style={{fontSize:"16px", borderRadius:"5px 5px 0 0", border:"1px solid #0000A0" }} >
             <IonRow style={{padding:"10px", background:"#0000A0"}}>
                 <IonText mode="ios" style={{color:"white"}}>XPDC2022080621-2</IonText>
             </IonRow>
@@ -132,7 +127,7 @@ return(
                 <IonText mode="ios" style={{fontSize:"16px", color:"black"}}>Tinggi: 10 cm</IonText>
             </IonRow>
           </IonCard>
-          <IonCard style={{fontSize:"16px", borderRadius:"10px 10px 0 0" }} >
+          <IonCard style={{fontSize:"16px", borderRadius:"5px 5px 0 0", border:"1px solid #0000A0" }} >
             <IonRow style={{padding:"10px", background:"#0000A0"}}>
                 <IonText mode="ios" style={{color:"white"}}>XPDC2022080621-3</IonText>
             </IonRow>

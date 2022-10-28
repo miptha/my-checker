@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import $ from 'jquery';
 import './Login.css';
 import { StatusBar } from '@capacitor/status-bar';
+import { PushNotifications, Token, PushNotificationSchema, ActionPerformed } from "@capacitor/push-notifications";
 
 const Login: React.FC = () => {
     const [alert, setAlert] = useState(false)
@@ -21,6 +22,8 @@ const Login: React.FC = () => {
     const [phone, setPhone] = useState('');
     const [alertMsg, setAlertMsg] = useState('');
     const [openlupakatasandi, setOpenLupaKataSandi] = useState(false);
+    const [getToken, setGetToken] = useState('');
+    const [tokenFCM, setTokenFCM] = useState('');
 
     const Auth = async (e: any) => {
         e.preventDefault();
@@ -82,6 +85,16 @@ const Login: React.FC = () => {
             
         })
     }
+
+    useIonViewWillEnter(() => {
+        PushNotifications.addListener('registration',(token: Token) => {
+            // alert(`Token: ${token.value}`);
+            setGetToken(token.value)
+            setTokenFCM(token.value);
+            localStorage.setItem('fcm_token', token.value)
+        })
+    
+})
 
     function lupakatasandi(){
         window.open('/Lupapassword','_self')

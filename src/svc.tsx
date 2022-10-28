@@ -41,7 +41,7 @@ const svc: React.FC = () => {
             <IonSegment value="inbound" mode="md" >
             <IonSegmentButton value="inbound" mode="md">
                 INBOUND
-                <IonBadge className='badge'mode='ios' style={{position:"absolute", top:"10px", right:"0", marginRight:"10px", fontSize:"16px", background:"red"}}>5</IonBadge>
+                <IonBadge className='badge'mode='ios' style={{position:"absolute", top:"10px", right:"0", marginRight:"10px", fontSize:"16px", background:"red"}}>0</IonBadge>
             </IonSegmentButton>
             <IonSegmentButton value="outbound" mode="md">
                 OUTBOUND

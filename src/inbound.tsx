@@ -1,6 +1,6 @@
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
-import { IonActionSheet, IonButtons, IonCard, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonInfiniteScroll, IonInfiniteScrollContent, IonItemDivider, IonMenuButton, IonPage, IonRow, IonText, IonToolbar } from "@ionic/react"
-import { call, callOutline, ellipseOutline, logoWhatsapp } from "ionicons/icons"
+import { IonActionSheet, IonButton, IonButtons, IonCard, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonInfiniteScroll, IonInfiniteScrollContent, IonItemDivider, IonMenuButton, IonPage, IonRow, IonText, IonToolbar } from "@ionic/react"
+import { call, callOutline, chevronForward, ellipseOutline, logoWhatsapp } from "ionicons/icons"
 import { useState } from "react";
 
 const inbound: React.FC = () => {
@@ -40,15 +40,16 @@ const inbound: React.FC = () => {
         <IonContent>
             <IonCard style={{border:"solid 1px #0000A0", borderRadius:"10px"}}>
                 <IonGrid>
-                  <IonRow style={{borderBottom:"solid 1px black"}} >
-                    <IonCol size='6' style={{textAlign:"start"}}>
-                      <h6 style={{fontWeight:"800", color:"black", margin:"10px 5px", fontSize:"14px"}}>XPDC2022080621</h6>
-                    </IonCol>
-                    <IonCol size='6' style={{textAlign:"end", padding:"10px 0"}}>
-                      <button style={{padding:"5px", borderRadius:"5px", background:"#0000A0", color:"white"}}>Dalam Pengiriman</button>
-                    </IonCol>
+                  <IonRow style={{borderBottom:"solid 2px gray"}} onClick={detailinbound}>
+                      <IonCol style={{textAlign:"start"}}>
+                        <h6 style={{fontWeight:"700", color:"black", margin:"10px 5px", fontSize:"14px", marginBottom:"0"}}>XPDC2022080621</h6>
+                        <button style={{padding:"5px", borderRadius:"5px", background:"#0000A0", marginLeft:"5px"}}>Dalam Pengiriman</button>
+                      </IonCol>
+                      <IonCol size='2' style={{textAlign:"end", padding:"10px 0"}}>
+                        <IonIcon src={chevronForward} style={{fontSize:"30px", color:"#0000A0"}}></IonIcon>
+                      </IonCol>
                   </IonRow>
-                  <IonRow onClick={detailinbound}>
+                  <IonRow >
                     <IonCol size='2'>
                       <IonRow style={{padding:"10px 0"}}>
                         <IonIcon icon={ellipseOutline} style={{background:"#A3A3A3", width:"24px", height:"24px", borderRadius:"50%", color:"#A3A3A3", margin:"auto"}}></IonIcon>
@@ -83,17 +84,6 @@ const inbound: React.FC = () => {
                 </IonGrid>
               </IonCard>
           </IonContent>
-          <IonFooter style={{background:"white"}}>
-          <IonGrid style={{padding:"10px 0", margin:"5px"}} onClick={plugBarcode}>
-            <IonRow>
-                <button style={{width:"100%", background:"#0000A0", borderRadius:"10px", display:"flex",justifyContent:"center"}} >
-                    <IonText mode='ios' style={{fontSize:"16px", color:"white", margin:"15px 5px"}}>
-                        SCAN PICKUP
-                    </IonText>
-                </button>
-            </IonRow>
-          </IonGrid>
-        </IonFooter>
     </IonPage>
     )
 }
